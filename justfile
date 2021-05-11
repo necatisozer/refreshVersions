@@ -15,6 +15,8 @@ site:
     open https://jmfayard.github.io/refreshVersions/
 github:
     open https://github.com/jmfayard/refreshVersions/
+wiki:
+    open https://github.com/jmfayard/refreshVersions/wiki
 todos:
     open https://github.com/jmfayard/refreshVersions/projects/4
 issues:

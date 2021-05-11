@@ -100,13 +100,13 @@ open class RefreshVersionsPlugin : Plugin<Any> {
     private fun applyToProject(project: Project) {
         if (project != project.rootProject) return // We want the tasks only for the root project
 
-        project.tasks.register<RefreshVersionsDependenciesMigrationTask>(
-            name = "migrateToRefreshVersionsDependenciesConstants"
+        project.tasks.register<RefreshVersionsMigrateTask>(
+            name = "refreshVersionsMigrate"
         ) {
             group = "help"
             description = "Assists migration from hardcoded dependencies to constants of " +
                 "the refreshVersions dependencies plugin"
-            finalizedBy("refreshVersions")
+            //TODO uncomment : finalizedBy("refreshVersions")
         }
 
         project.tasks.register<DefaultTask>(
